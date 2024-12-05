@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+    <title>Formulario Dinamico</title>
+</head>
+<body>
+    <h1>Dynamic Form</h1>
+    <form id="user-form">
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your email" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Enter your password" required><br><br>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" required><br><br>
+
+        <label for="surname">Surname:</label>
+        <input type="text" id="surname" placeholder="Enter your surname" required><br><br>
+
+        <p>Are you an employee?</p>
+        <label>
+            <input type="radio" name="employee" value="yes" id="employee-yes"> Yes
+        </label>
+        <label>
+            <input type="radio" name="employee" value="no" id="employee-no" checked> No
+        </label><br><br>
+
+        <div id="employment-field" style="display: none;">
+            <label for="job">Job Title:</label>
+            <input type="text" id="job" placeholder="Enter your job title"><br><br>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        var yesRadio = document.getElementById("employee-yes");
+        var noRadio = document.getElementById("employee-no");
+        var employmentField = document.getElementById("employment-field");
+
+        //  "Yes"
+        yesRadio.onclick = function() {
+            employmentField.style.display = "block";
+        };
+
+        noRadio.onclick = function() {
+            employmentField.style.display = "none";
+        };
+    </script>
+</body>
+</html>
