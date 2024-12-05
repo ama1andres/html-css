@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+    <title>Input and Display</title>
+</head>
+<body>
+    <h1>Display Text Input</h1>
+    <input type="text" id="text-input" placeholder="Enter  text">
+    <!-- Bot -->
+    <button id="submit-button">Submit</button>
+    <p id="display-area"></p>
+
+    <script>
+        var input = document.getElementById("text-input");
+        var button = document.getElementById("submit-button");
+        var display = document.getElementById("display-area");
+
+        button.onclick = function() {
+            var text = input.value; // Obtener el valor del input
+            display.textContent = text;
+            input.value = ""; 
+        };
+    </script>
+</body>
+</html>
